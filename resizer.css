@@ -3,6 +3,8 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
   margin: 0;
+  /* height: 100%;
+  width: 100%; */
 }
 * {
   box-sizing: border-box;
@@ -15,22 +17,28 @@ a {
   border: 1px solid #f5600a;
   height: 100%;
   width: 100%;
+  align-self: stretch;
+  /* Высота под вопросом */
+  height: 100vh;
 }
 
 .resizer {
   background-color: #337bc9;
   cursor: ew-resize;
-  height: 100%;
-  width: 3px;
+  /* height: 100%; */
+  width: 4px;
 }
 .container-left {
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 50%;
+  min-width: 25%;
 }
 .container-right {
-  flex: 1;
+  /* flex: 1; */
   align-items: center;
   display: flex;
   justify-content: center;
+  min-width: 25%;
 }
