@@ -22,11 +22,60 @@ a {
   height: 100vh;
 }
 
-.resizer {
-  background-color: #337bc9;
-  cursor: ew-resize;
+.resizer1 {
+  background-color: #6b6b6b;
+  /* cursor: ew-resize; */
+  cursor: col-resize;
+
   /* height: 100%; */
+  width: 15px;
+
+  /* position: absolute; */
+
+  color: #a9a9a9;
+}
+.resizer {
+  border-left: 1px solid rgba(110, 110, 110, 0.5);
+  border-right: 1px solid rgba(110, 110, 110, 0.5);
   width: 4px;
+  height: 100%;
+  margin-left: -2px;
+  top: 0;
+  left: 16px;
+  cursor: col-resize;
+  margin-left: -5px;
+}
+
+.resizer:before {
+  /* position: absolute;
+  /* vertical-align: middle; */
+  /* top: 100px;
+  right: 50px; */
+
+  position: absolute;
+  display: block;
+  top: 50%;
+  /* left: 50%;
+  right: 50%; */
+  bottom: 50%;
+  margin: -7px;
+  /* left: 50%;  */
+  /* display: inline-block; */
+  /* justify-content: center;
+  right: 10px;
+  width: 18px;
+  
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;  */
+  font-family: "calcite-ui";
+  content: "\f12a";
+  color: #6b6b6b;
 }
 .container-left {
   align-items: center;

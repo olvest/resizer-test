@@ -1,17 +1,11 @@
-console.log("mouseUpHandler1");
-
-// Query the element
 const resizer = document.getElementById("dragMe");
 const leftSide = resizer.previousElementSibling;
 const rightSide = resizer.nextElementSibling;
 
-// The current position of mouse
 let x = 0;
 let y = 0;
 let leftWidth = 0;
 
-// Handle the mousedown event
-// that's triggered when user drags the resizer
 const mouseDownHandler = function (e) {
   // Get the current mouse position
   console.log("mouseDownHandler2");
@@ -19,14 +13,11 @@ const mouseDownHandler = function (e) {
   y = e.clientY;
   leftWidth = leftSide.getBoundingClientRect().width;
 
-  // Attach the listeners to `document`
   document.addEventListener("mousemove", mouseMoveHandler);
   document.addEventListener("mouseup", mouseUpHandler);
 };
 
 const mouseMoveHandler = function (e) {
-  console.log("mouseMoveHandler");
-  // How far the mouse has been moved
   const dx = e.clientX - x;
   const dy = e.clientY - y;
 
@@ -55,10 +46,8 @@ const mouseUpHandler = function () {
   rightSide.style.removeProperty("user-select");
   rightSide.style.removeProperty("pointer-events");
 
-  // Remove the handlers of `mousemove` and `mouseup`
   document.removeEventListener("mousemove", mouseMoveHandler);
   document.removeEventListener("mouseup", mouseUpHandler);
 };
 
-// Attach the handler
 resizer.addEventListener("mousedown", mouseDownHandler);
