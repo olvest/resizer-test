@@ -33,6 +33,18 @@ a {
   cursor: col-resize;
   margin-left: 8px;
 }
+.resizer:hover {
+  /* border-left: 1px solid rgba(110, 110, 110, 0.5);
+  border-right: 1px solid rgba(110, 110, 110, 0.5);
+  width: 4px;
+  height: 100%;
+  margin-left: -2px;
+  top: 0;
+  left: 16px;
+  cursor: col-resize;
+  margin-left: 8px; */
+  background-color: rgb(38, 78, 209);
+}
 
 .horizontal-resizer {
   width: 20px;
