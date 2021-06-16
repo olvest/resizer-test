@@ -22,18 +22,6 @@ a {
   height: 100vh;
 }
 
-.resizer1 {
-  background-color: #6b6b6b;
-  /* cursor: ew-resize; */
-  cursor: col-resize;
-
-  /* height: 100%; */
-  width: 15px;
-
-  /* position: absolute; */
-
-  color: #a9a9a9;
-}
 .resizer {
   border-left: 1px solid rgba(110, 110, 110, 0.5);
   border-right: 1px solid rgba(110, 110, 110, 0.5);
@@ -43,39 +31,41 @@ a {
   top: 0;
   left: 16px;
   cursor: col-resize;
-  margin-left: -5px;
+  margin-left: 8px;
 }
 
-.resizer:before {
-  /* position: absolute;
-  /* vertical-align: middle; */
-  /* top: 100px;
-  right: 50px; */
-
+.horizontal-resizer {
+  width: 20px;
+  /* background-color: #cccccc; */
+  cursor: col-resize;
+}
+.swipe {
   position: absolute;
-  display: block;
   top: 50%;
-  /* left: 50%;
-  right: 50%; */
-  bottom: 50%;
-  margin: -7px;
-  /* left: 50%;  */
-  /* display: inline-block; */
-  /* justify-content: center;
-  right: 10px;
-  width: 18px;
-  
+  width: 20px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  border: 1px solid rgba(110, 110, 110, 0.5);
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.swipe-icon-vertical {
+  font-family: "CalciteWebCoreIcons" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-decoration: none;  */
-  font-family: "calcite-ui";
-  content: "\f12a";
-  color: #6b6b6b;
+}
+.swipe-icon-vertical:before {
+  content: "";
+  color: inherit;
 }
 .container-left {
   align-items: center;
